@@ -1,0 +1,19 @@
+
+.panel-title {
+  font-size: 22px;
+}
+
+a:visited {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 500px;
+  }
+}
+
+body {
+  font-size: 18px;
+
+}
