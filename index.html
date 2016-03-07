@@ -132,9 +132,7 @@
           for (j=0; j < list.length; j++) {
             var name = list[j];
             var file = name.split(' ').join('') + '.pdf';
-            // panels += "<a href='" + file + "'><div class='panel-body'>" + name + "</div></a>";
             panels += "<div class='panel-body'><a target='_blank' href='" + file + "'>" + name + "</a></div>";
-            console.log(panels);
           }
 
           $('#collapse' + (i + 1)).html(panels);
