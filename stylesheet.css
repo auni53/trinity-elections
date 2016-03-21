@@ -43,3 +43,12 @@ h2 {
 h3 {
   margin-bottom: 5px;
 }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+table {
+animation-name: spin; animation-duration: 4000ms; animation-iteration-count: infinite; anima
+    tion-timing-function: linear;}
