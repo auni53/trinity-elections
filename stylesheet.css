@@ -1,4 +1,3 @@
-
 .panel-title {
   font-size: 22px;
 }
@@ -15,5 +14,32 @@ a:visited {
 
 body {
   font-size: 18px;
+}
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.dump {
+  text-transform: none;
+}
+
+table {
+  margin-right: auto;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 5px;
+}
+
+h3 {
+  margin-bottom: 5px;
 }
