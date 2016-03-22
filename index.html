@@ -4,141 +4,67 @@
   <head>
 
     <title>Trinity Elections 2016</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" cha
-     rset="utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1' charset='utf-8' />
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!--link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel='stylesheet' type='text/css' href='stylesheet.css'>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 
   </head>
   <body>
 
-    <div class="container">
+    <div class='container'>
       <h1>Trinity Elections 2016</h1>
-      <h2>Week 1 Positions</h2>
+      <h2>Week 1 Results</h2>
       <hr/>
 
-      <div class="panel-group" id="accordion">
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                Female Head of Arts
-              </a>
-            </h4>
-          </div>
-          <div id="collapse1" class="panel-collapse collapse"></div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Male Head of Arts</a>
-            </h4>
-          </div>
-          <div id="collapse2" class="panel-collapse collapse"></div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Female Head of College</a>
-            </h4>
-          </div>
-          <div id="collapse3" class="panel-collapse collapse"></div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Male Head of College</a>
-            </h4>
-          </div>
-          <div id="collapse4" class="panel-collapse collapse"></div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Female Head of NRA</a>
-            </h4>
-          </div>
-          <div id="collapse5" class="panel-collapse collapse"></div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Male Head of NRA</a>
-            </h4>
-          </div>
-          <div id="collapse6" class="panel-collapse collapse"></div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">TCM Chair</a>
-            </h4>
-          </div>
-          <div id="collapse7" class="panel-collapse collapse">  </div>
-        </div>
-
+      <div class='dump'>
       </div>
     </div>
 
     <script>
 
-      function shuffle(array) {
-        var currentIndex = array.length, temporaryValue, randomIndex;
+      let candidates = [
+        { name : 'Larissa Parker', position: 'Ashley Award' }, { name : 'Alexander Sapp', position: 'Sober Patrol Leaders' }, { name : 'Mattea Roach', position: '2F Head Non-Res' }, { name : 'Nathan Chan', position: 'Trinity Director' }, { name : 'Nathan Chan', position: 'Senate Rep' }, { name : 'Julien Ferland', position: '4M Head Res' }, { name : 'Lukas Weese', position: 'TCMHI Co-President' }, { name : 'Carol Drumm', position: 'TCMHI Co-President' }, { name : 'Amelia Cook', position: 'Co-President Trin Athletics' }, { name : 'Christina Collis', position: 'Co-President Trin Athletics' }, { name : 'Elise Wagner', position: '4F Head Res' }, { name : 'Nicholas Cunha', position: '4M Head Non-Res' }, { name : 'Alex McKeever', position: 'Prime Minister of the TCLI' }, { name : 'Pierre Kochel', position: 'Speaker of the TCLI' }, { name : 'Cas Legranol', position: '4M Head Non-Res' }, { name : 'Florian Nagy', position: '2M Head Non-Res' }, { name : 'Braeden Mills', position: 'Speaker of the TCLI' }, { name : 'Alexa Waud', position: 'TCES Co-President' }, { name : 'Jerry Zhu', position: '2M Head Res' }, { name : 'Danielle Pal', position: 'TCES Co-President' }, { name : 'Maddy Torrie', position: 'Speaker of the TCLI' }, { name : 'Shubhi Sahni', position: '3F Head Non-Res' }, { name : 'Emily Brade', position: 'Senate Rep' }, { name : 'Leila Martin', position: 'TCM Treasurer' }, { name : 'Terra Morel', position: '3F Head Non-Res' }, { name : 'Braden Kenny', position: 'Co-President TCDS' }, { name : 'Amr Doughan', position: '2M Head Res' }, { name : 'Avneet Sharma', position: '2M Head Res' }, { name : 'Olivia Arski', position: '2F Head Non-Res' }, { name : 'Aisha Ryan', position: '2F Head Res' }, { name : 'Shaza Ali', position: '2F Head Non-Res' }, { name : 'Graydon Kelch', position: 'TCM Secretary' }, { name : 'Emily Shaw', position: 'TCDS Co-President' }, { name : 'Fakeha Jamil', position: '2F Head Res' }, { name : 'Jessica Rapson', position: '2F Head Res' }, { name : 'Kate Power', position: '2F Head Non-Res' }, { name : 'Ethan Raymond', position: 'Salterrae EIC' }, { name : 'Ursula Carmichael', position: '3F Head Res' }, { name : 'Jing Wang', position: '2F Head Res' }, { name : 'Julian Snelling', position: '2M Head Res' }, { name : 'Katie Fettes', position: 'TCVS President' }, { name : 'Syndi Li Walton', position: '3F Head Non-Res' }, { name : 'Sam Kokonis', position: 'Rainbow Trin President' }, { name : 'Sam Kokonis', position: 'Senate Rep' }, { name : 'Mayte Anchante', position: 'WUSC President' }, { name : 'Mac Chapin', position: 'Ashley Award' }, { name : 'Erin Ross', position: 'TCM Secretary' }, { name : 'Alessandra Harkness', position: '4? Head Non-Res' }, { name : 'Henry Adlam', position: '3M Head Non-Res' }, { name : 'Pri Sharma', position: '3F Head Non-Res' }, { name : 'Phil Schwarz', position: '3M Head Non-Res' }, { name : 'Phil Schwarz', position: 'Rainbow Trin President' }, { name : 'Braden Kenny', position: '3M Head Res' }, { name : 'Marcus Tutert', position: 'Senate Rep' }, { name : 'Brian Lee', position: 'Trinity UTSU Director' }, { name : 'Fares Kardous', position: 'TCM Treasurer' }, { name : 'Naraih Yucel', position: 'Senate Rep' }, { name : 'Claire Shenstone-Harris', position: 'TCDS Co-President' }, { name : 'Sarah Harrison', position: 'Trinity UTSU Director' }, { name : 'Kendra Dempsey', position: 'TCM Secretary' },
+        { name : 'Kendra Dempsey', position: '3F Head Res' }, { name : 'Magi Jury Leung (Jerry)', position: 'TCM Secretary' }, { name : 'Magi Jury Leung (Jerry)', position: 'Senate Rep' }, { name : 'Emma Bailey', position: 'Co-President TCMHI' }, { name : 'Emma Bailey', position: '4F Head Non-Res' }, { name : 'Theodore Browne', position: '2? Head Res' }, { name : 'Liam Brister', position: 'Trinity Athletics Co-President' }, { name : 'Sydney Bradshaw', position: 'TCM Webmaster' }, { name : 'Sydney Bradshaw, Ben Rudolph', position: 'Stephanos Ticket' }, { name : 'Haris Raheel', position: '3M Head Non-Res' }, { name : 'Rhiannon Langford', position: '4F Head Res' }, { name : 'Rhiannon Langford', position: 'Prime Minister of the TCLI' }, { name : 'Andrew Irwin', position: 'Senate Rep' }, { name : 'Angie Salomon', position: 'Ashley Award' }, { name : 'Angie Salomon', position: 'Patteson Award' }, { name : 'Arjun Gandhi', position: 'Senate Rep' }, { name : 'Ardun Gandhi', position: 'Salterrae EIC' }, { name : 'Katrina Li', position: '3F Head Non-Res' }, { name : 'Lorina Hoxha (EIC), Malcolm Sanger, Allegra Wiesenfeld, Emmy Fu', position: 'Trinity Review Ticket' }, { name : 'Speaker of the TCLI', position: 'Vanessa Perruzza' }, { name : 'Larissa Parker', position: 'Patterson Award' }
+      ];
 
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-
-          // Pick a remaining element...
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
-
-          // And swap it with the current element.
-          temporaryValue = array[currentIndex];
-          array[currentIndex] = array[randomIndex];
-          array[randomIndex] = temporaryValue;
-        }
-
-        return array;
-      }
+      let positions = [
+        'Prime Minister of the TCLI', 'Speaker of the TCLI', 'Rainbow Trin President', 'Trinity Athletics Co-President', 'TCDS Co-President', 'TCES Co-President', 'TCMHI Co-President', 'TCVS President', 'President of WUSC', 'Salterrae EIC', 'Stephanos Ticket', 'Trinity Review Ticket', 'TCM Treasurer', 'TCM Secretary', 'TCM Auditor', 'Trinity UTSU Director', 'Sober Patrol Leaders', 'Ashley Award', 'Patterson Award', 'Senate Representatives', '4F Head Non-Res', '4M Head Non-Res', '4F Head Res', '4M Head Res', '3F Head Non-Res', '3M Head Non-Res', '3F Head Res', '3M Head Res', '2F Head Non-Res', '2M Head Non-Res', '2F Head Res', '2M Head Res'
+      ]
 
       $( document ).ready(function() {
-        var candidates = [
-          ['Sydney Bradshaw', 'Chelsea Colwill', 'Liz Gross'],
-          ['Magi Jury Leung', 'Thomas Robson', 'Lukas Weese'],
-          ['Nish Chankar'],
-          ['Connor Campbell', 'Arjun Gandhi', 'Lorne Levy', 'Anthony Marchese', 'Jeffrey Schulman', 'Marcus Tutert'],
-          ['Billie Rose Owen', 'Joudy Sarraj'],
-          ['Nathan Postma', 'Basil Southey', 'Dario Toman'],
-          ['Jaclyn Flom']
-        ];
 
-        for (i=0; i < 7; i++) {
-          var panels = '';
+        canList = [];
+        for (let j in candidates) {
+          canList.push(candidates[j].name);
+        } console.log(canList);
 
-          shuffle(candidates[i]);
-          var list = candidates[i];
-          for (j=0; j < list.length; j++) {
-            var name = list[j];
-            var file = name.split(' ').join('') + '.pdf';
-            panels += "<div class='panel-body'><a target='_blank' href='" + file + "'>" + name + "</a></div>";
+        for (let i in positions) {
+
+          $( '.dump' ).append('<h3>' +
+            process(positions[i])
+          + '</h3>');
+
+          for (let j in candidates) {
+            if (positions[i] === candidates[j].position) {
+              canList.splice(candidates[j].name);
+              $( '.dump' ).append('<p>' +
+                candidates[j].name
+              + '</p>');
+            }
           }
-
-          $('#collapse' + (i + 1)).html(panels);
         }
-
+        console.log(canList);
       });
+
+      function process(text) {
+        return text;
+      }
+
     </script>
   </body>
 </html>
