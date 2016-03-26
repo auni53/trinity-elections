@@ -112,6 +112,8 @@
           target = target.split(' ').join('');
           target = target.split('-').join('');
           target = target.split('#').join('');
+          target = target.split('(').join('');
+          target = target.split(')').join('');
 
           let panel = (
             "<div class='panel panel-default'>\
