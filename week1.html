@@ -1,0 +1,64 @@
+<!doctype HTML5>
+
+<html>
+  <head>
+
+    <title>Trinity Elections 2016</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' charset='utf-8' />
+
+    <!--link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel='stylesheet' type='text/css' href='stylesheet.css'>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+  </head>
+  <body>
+
+    <div class='container'>
+      <h1>Trinity Elections 2016</h1>
+      <h2>Week 1 Results</h2>
+      <hr/>
+
+      <div class='dump'>
+      </div>
+    </div>
+
+    <script>
+
+      let data = {"Female Head of NRA": {"Reopen Nominations": [32], "Joudy Sarraj": [232], "Billie Rose Owen": [153]}, "Female Head of Arts": {"Sydney Bradshaw": [81, 82, "*"], "Liz Gross": [156, 158, 183], "Chelsea Colwill": [187, 194, 224], "Reopen Nominations": [33, "*", "*"]}, "Female Head of College": {"Reopen Nominations": [84], "Nish Chankar": [370]}, "TCM Chair": {"Reopen Nominations": [164], "Jaclyn Flom": [275]}, "Male Head of Arts": {"Magi-Jeury Leung (Jerry)": [185], "Reopen Nominations": [31], "Thomas Robson": [267]}, "Male Head of NRA": {"Reopen Nominations": [52], "Basil Southey": [238], "Dario Toman": [155]}, "Male Head of College": {"Arjun Gandhi": [106, 109, 113, 118, 137], "Connor Campbell": [66, 67, 73, 77, 85], "Lorne Levy": [48, 51, 53, 59, "*"], "Reopen Nominations": [20, "*", "*", "*", "*"], "Anthony Marchese": [187, 187, 191, 203, 224], "Jeffrey E. Schulman": [24, 24, "*", "*", "*"], "Marcus Tutert": [28, 30, 32, "*", "*"]}};
+
+      $( document ).ready(function() {
+
+        var text = '';
+        for (let i in data) {
+
+          text += '<h3>' + i + '</h3>';
+          text += '<table class="pure-table pure-table-horizontal"><thead><tr><th>Round</th>';
+
+          let length;
+          for (let name in data[i]) {
+            text += '<th>' + name + '</th>'
+            length = data[i][name].length;
+          } text += '</tr></thead><tbody>';
+
+          let c = 0;
+          while (c < length) {
+            text += '<td><b>' + (c + 1) + '</b></td>';
+            for (let name in data[i]) {
+              text += '<td>' + data[i][name][c] + '</td>'
+            } text += '</tr>';
+            c++;
+          };
+          text += '</tbody></table><hr/>';
+
+          $( '.dump' ).append(text);
+          text = '';
+        }
+
+      });
+
+    </script>
+  </body>
+</html>
