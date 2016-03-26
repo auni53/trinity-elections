@@ -44,6 +44,19 @@ h3 {
   margin-bottom: 5px;
 }
 
+.winner {
+  font-weight: bold;
+}
+
+.ugh {
+  background-color: #333;
+}
+
+.ugh:hover {
+  background-color: inherit;
+  font-size: 96px;
+}
+
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
