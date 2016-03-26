@@ -18,53 +18,59 @@
 
     <div class='container'>
       <h1>Trinity Elections 2016</h1>
-      <h2>Week 2 Candidates</h2>
+      <h2>Week 2 Results</h2>
       <hr/>
 
-      <div class='ump'>
+      <div class='dump'>
       </div>
     </div>
 
     <script>
-
-      let candidates = [
-        { name : 'Larissa Parker', position: 'Ashley Award' }, { name : 'Alexander Sapp', position: 'Sober Patrol Leaders' }, { name : 'Mattea Roach', position: '2F Head Non-Res' }, { name : 'Nathan Chan', position: 'Trinity UTSU Director' }, { name : 'Nathan Chan', position: 'Senate Representatives' }, { name : 'Julien Ferland', position: '4M Head Res' }, { name : 'Lukas Weese', position: 'TCMHI Co-President' }, { name : 'Carol Drumm', position: 'TCMHI Co-President' }, { name : 'Amelia Cook', position: 'Trinity Athletics Co-President' }, { name : 'Christina Collis', position: 'Trinity Athletics Co-President' }, { name : 'Elise Wagner', position: '4F Head Res' }, { name : 'Nicholas Cunha', position: '4M Head Non-Res' }, { name : 'Alex McKeever', position: 'Prime Minister of the TCLI' }, { name : 'Pierre Kochel', position: 'Speaker of the TCLI' }, { name : 'Cas Legranol', position: '4M Head Non-Res' }, { name : 'Florian Nagy', position: '2M Head Non-Res' }, { name : 'Braeden Mills', position: 'Speaker of the TCLI' }, { name : 'Alexa Waud', position: 'TCES Co-President' }, { name : 'Jerry Zhu', position: '2M Head Res' }, { name : 'Danielle Pal', position: 'TCES Co-President' }, { name : 'Maddy Torrie', position: 'Speaker of the TCLI' }, { name : 'Shubhi Sahni', position: '3F Head Non-Res' }, { name : 'Emily Brade', position: 'Senate Representatives' }, { name : 'Leila Martin', position: 'TCM Treasurer' }, { name : 'Terra Morel', position: '3F Head Non-Res' }, { name : 'Braden Kenny', position: 'TCDS Co-President' }, { name : 'Amr Doughan', position: '2M Head Res' }, { name : 'Avneet Sharma', position: '2M Head Res' }, { name : 'Olivia Arski', position: '2F Head Non-Res' }, { name : 'Aisha Ryan', position: '2F Head Res' }, { name : 'Shaza Ali', position: '2F Head Non-Res' }, { name : 'Graydon Kelch', position: 'TCM Secretary' }, { name : 'Emily Shaw', position: 'TCDS Co-President' }, { name : 'Fakeha Jamil', position: '2F Head Res' }, { name : 'Jessica Rapson', position: '2F Head Res' }, { name : 'Kate Power', position: '2F Head Non-Res' }, { name : 'Ethan Raymond', position: 'Salterrae EIC' }, { name : 'Ursula Carmichael', position: '3F Head Res' }, { name : 'Jing Wang', position: '2F Head Res' }, { name : 'Julian Snelling', position: '2M Head Res' }, { name : 'Katie Fettes', position: 'TCVS President' }, { name : 'Syndi Li Walton', position: '3F Head Non-Res' }, { name : 'Sam Kokonis', position: 'Rainbow Trin President' }, { name : 'Sam Kokonis', position: 'Senate Representatives' }, { name : 'Mayte Anchante', position: 'WUSC President' }, { name : 'Mac Chapin', position: 'Ashley Award' }, { name : 'Erin Ross', position: 'TCM Secretary' }, { name : 'Alessandra Harkness', position: '4? Head Non-Res' }, { name : 'Henry Adlam', position: '3M Head Non-Res' }, { name : 'Pri Sharma', position: '3F Head Non-Res' }, { name : 'Phil Schwarz', position: '3M Head Non-Res' }, { name : 'Phil Schwarz', position: 'Rainbow Trin President' }, { name : 'Braden Kenny', position: '3M Head Res' }, { name : 'Marcus Tutert', position: 'Senate Representatives' }, { name : 'Brian Lee', position: 'Trinity UTSU Director' }, { name : 'Fares Kardous', position: 'TCM Treasurer' }, { name : 'Naraih Yucel', position: 'Senate Representatives' }, { name : 'Claire Shenstone-Harris', position: 'TCDS Co-President' }, { name : 'Sarah Harrison', position: 'Trinity UTSU Director' }, { name : 'Kendra Dempsey', position: 'TCM Secretary' },
-        { name : 'Kendra Dempsey', position: '3F Head Res' }, { name : 'Magi Jury Leung (Jerry)', position: 'TCM Secretary' }, { name : 'Magi Jury Leung (Jerry)', position: 'Senate Representatives' }, { name : 'Emma Bailey', position: 'TCMHI Co-President' }, { name : 'Emma Bailey', position: '4F Head Non-Res' }, { name : 'Theodore Browne', position: '2? Head Res' }, { name : 'Liam Brister', position: 'Trinity Athletics Co-President' }, { name : 'Sydney Bradshaw', position: 'TCM Webmaster' }, { name : 'Sydney Bradshaw, Ben Rudolph', position: 'Stephanos Ticket' }, { name : 'Haris Raheel', position: '3M Head Non-Res' }, { name : 'Rhiannon Langford', position: '4F Head Res' }, { name : 'Rhiannon Langford', position: 'Prime Minister of the TCLI' }, { name : 'Andrew Irwin', position: 'Senate Representatives' }, { name : 'Angie Salomon', position: 'Ashley Award' }, { name : 'Angie Salomon', position: 'Patteson Award' }, { name : 'Arjun Gandhi', position: 'Senate Representatives' }, { name : 'Ardun Gandhi', position: 'Salterrae EIC' }, { name : 'Katrina Li', position: '3F Head Non-Res' }, { name : 'Lorina Hoxha (EIC), Malcolm Sanger, Allegra Wiesenfeld, Emmy Fu', position: 'Trinity Review Ticket' }, { name : 'Speaker of the TCLI', position: 'Vanessa Perruzza' }, { name : 'Larissa Parker', position: 'Patterson Award' }
-      ];
-
-      let positions = [
-        'Prime Minister of the TCLI', 'Speaker of the TCLI', 'Rainbow Trin President', 'Trinity Athletics Co-President', 'TCDS Co-President', 'TCES Co-President', 'TCMHI Co-President', 'TCVS President', 'President of WUSC', 'Salterrae EIC', 'Stephanos Ticket', 'Trinity Review Ticket', 'TCM Treasurer', 'TCM Secretary', 'TCM Auditor', 'Trinity UTSU Director', 'Sober Patrol Leaders', 'Patterson Award', 'Senate Representatives', '4F Head Non-Res', '4M Head Non-Res', '4F Head Res', '4M Head Res', '3F Head Non-Res', '3M Head Non-Res', '3F Head Res', '3M Head Res', '2F Head Non-Res', '2M Head Non-Res', '2F Head Res', '2M Head Res'
-      ]
-
       $( document ).ready(function() {
-
-        let cans = candidates;
-
-        count = 0;
-        for (let i in positions) {
-
-          $( '.dump' ).append('<h3>' +
-            process(positions[i]) + ': ' 
-          + '</h3>');
-
-          for (let j in candidates) {
-            if (positions[i] === candidates[j].position) {
-              $( '.dump' ).append('<p>- ' +
-                candidates[j].name
-              + '</p>');
-              cans.splice(cans.indexOf(candidates[j]), 1);
-              count++;
-            }
-          }
-        }
-        for (let i in cans) console.log(cans[i].name, cans[i].position);
-        console.log(count);
-        debugger;
+        $.ajax({
+          // url : 'https://raw.githubusercontent.com/auni53/trinity-elections/gh-pages/data.json',
+          url : 'data.json',
+          dataType : 'json',
+          success : function(result) {
+            $( '.dump' ).append(create(result));
+          },
+          error : function() { console.log('ERROR'); debugger; }
+        });
       });
 
-      function process(text) {
+      function create(data) {
+
+        debugger;
+        text = '';
+        for (let position in data) {
+
+          // Create header and table
+          text += '<h3>' + position + '</h3>';
+          text += '<table class="pure-table pure-table-horizontal"><thead><tr><th>Round</th>';
+
+          let table = data[position];
+          let length = table['Reopen Nominations'].length;
+
+          // Create table header
+          for (let name in table) {
+            text += '<th>' + name + '</th>'
+          } text += '</tr></thead><tbody>';
+
+          // Generate tabel rows
+          let c = 0;
+          while (c < length) {
+            text += '<td><b>' + (c + 1) + '</b></td>';
+            for (let name in table) {
+              text += '<td>' + table[name][c] + '</td>'
+            } text += '</tr>';
+            c++;
+          };
+          text += '</tbody></table><hr/>';
+
+        }
         return text;
-      }
+
+    }
 
     </script>
   </body>
