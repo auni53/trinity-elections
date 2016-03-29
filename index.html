@@ -83,12 +83,12 @@
           var position = positions[i];
 
           // Create header and table
-          // text += '<h3>' + position + '</h3>';
           var header = position;
           text += '<table class="pure-table pure-table-horizontal"><thead><tr><th>Round</th>';
 
           var table = data[position];
-          var length = table['Reopen Nominations'].length;
+          var length;
+          for (let j in table) { length = table[j].length; break; }
           var winner = getWinner(table);
 
           // Create table header
@@ -124,11 +124,11 @@
                   "</a>\
                 </h4>\
               </div>\
-              <div id='" + target + "' class='collapse'>\
+              <div id='" + target + "' class='collapse in'>\
                 <div class='panel-body'>"
                    + text + '<br/>Final Count: <strong>' + getCount(table) + '</strong>'
                    + (header === 'Speaker of the TCLI' ? '<br/>Deputy Speaker: <strong>Maddy Torrie</strong>' : '')
-                   + (header === 'Prime Minister of the TCLI' ? '<br/>Opposition Leader: <strong>Alex McKeever</strong>' : '') 
+                   + (header === 'Prime Minister of the TCLI' ? '<br/>Opposition Leader: <strong>Alex McKeever</strong>' : '')
                 + "</div>\
               </div>\
             </div>"
