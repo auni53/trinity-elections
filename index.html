@@ -18,12 +18,8 @@
 
     <div class='container'>
       <h1>Trinity Elections 2016</h1>
-      <h2><strong>Week 2 Results</strong></h2>
-      <p class='ugh'>THIS TOOK ME FOUR HOURS TO MAKE AND IT'S 5:30 AM WHY DID I DO THIS</p>
+      <h2><strong>Week 3 Results</strong></h2>
       <hr/>
-
-      <!--div class='dump'>
-      </div-->
 
       <div class='panel-group' id='accordion'>
 
@@ -34,7 +30,7 @@
     <script>
       $( document ).ready(function() {
         $.ajax({
-          url : 'https://raw.githubusercontent.com/auni53/trinity-elections/gh-pages/data.json',
+          url : 'https://raw.githubusercontent.com/auni53/trinity-elections/gh-pages/data3.json',
           dataType : 'json',
           success : function(result) {
             $( '.dump' ).append(create(result));
@@ -88,7 +84,10 @@
 
           var table = data[position];
           var length;
-          for (let j in table) { length = table[j].length; break; }
+          for (var j in table) {
+            length = table[j].length;
+            break;
+          }
           var winner = getWinner(table);
 
           // Create table header

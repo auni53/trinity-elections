@@ -84,7 +84,10 @@
 
           var table = data[position];
           var length;
-          for (let j in table) { length = table[j].length; break; }
+          for (var j in table) {
+            length = table[j].length;
+            break;
+          }
           var winner = getWinner(table);
 
           // Create table header
@@ -120,7 +123,7 @@
                   "</a>\
                 </h4>\
               </div>\
-              <div id='" + target + "' class='collapse in'>\
+              <div id='" + target + "' class='collapse'>\
                 <div class='panel-body'>"
                    + text + '<br/>Final Count: <strong>' + getCount(table) + '</strong>'
                    + (header === 'Speaker of the TCLI' ? '<br/>Deputy Speaker: <strong>Maddy Torrie</strong>' : '')
