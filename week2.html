@@ -88,7 +88,7 @@
 
           var table = data[position];
           var length;
-          for (let j in table) { length = table[j].length; break; }
+          for (var j in table) { length = table[j].length; break; }
           var winner = getWinner(table);
 
           // Create table header
