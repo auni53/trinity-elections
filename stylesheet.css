@@ -2,6 +2,10 @@
   font-size: 22px;
 }
 
+a {
+  color: inherit;
+}
+
 a:visited {
   color: black;
 }
