@@ -1,0 +1,67 @@
+<!doctype HTML5>
+
+<html>
+  <head>
+
+    <title>Trinity Elections 2017</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' charset='utf-8' />
+
+    <!--link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel='stylesheet' type='text/css' href='../stylesheet.css'>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+  </head>
+  <body>
+
+    <div class='container'>
+      <h1>Trinity Elections 2017</h1>
+      <h2>Week 2 Results</h2>
+      <hr/>
+
+      <div class='dump'>
+      </div>
+    </div>
+
+    <script>
+			var data =
+{"Co-President of the TCA Winner #2": {"Lauren Adolphe": [43], "Reopen Nominations": [14], "Syndi Li Walton": [114], "Katie Fettes": ["*"], "Neumann Hon": [25]}, "Speaker of the TCLI": {"Reopen Nominations": [27], "Vanessa Perruzza": [57], "Jason Patrick Moore": [121]}, "TCM Secretary": {"Emily Chu": [27, 27, 29, 30, 34, 38, 41, "*", "*"], "Emma Norman": [51, 51, 51, 52, 57, 61, 68, 74, 90], "Jason Wui Leung Chan": [7, 7, "*", "*", "*", "*", "*", "*", "*"], "Oleg Kunystya": [5, "*", "*", "*", "*", "*", "*", "*", "*"], "Fakeha Jamil": [14, 14, 14, 14, "*", "*", "*", "*", "*"], "Reopen Nominations": [7, 8, 9, "*", "*", "*", "*", "*", "*"], "Aceel Hawa": [64, 64, 65, 66, 68, 68, 79, 88, 98], "Aisha Ryan": [30, 31, 31, 32, 32, 34, "*", "*", "*"], "Edie Guo": [41, 41, 41, 42, 42, 45, 47, 59, "*"], "Tanzim Rashid": [17, 20, 20, 20, 20, "*", "*", "*", "*"]}, "President of Rainbow Trinity": {"Reopen Nominations": [9], "Phil Schwarz": [48], "Weijia Chen(Jasper)": [0]}, "President of the TCVS": {"Reopen Nominations": [19], "Emily Neeson": [174]}, "Fourth Year Female Head of Non Residence": {"Reopen Nominations": [6], "Katie Fettes": [49]}, "Second Year Female Head of Residence": {"Reopen Nominations": [5, "*", "*", "*"], "Sarah Ingle": [20, 20, 22, 28], "Arwyn Workman-Youmans": [17, 18, 23, 32], "Davis Haugen": [15, 16, 17, "*"], "Ruth Magee": [9, 9, "*", "*"]}, "Trinity Review": {"Reopen Nominations": [47], "Emmy Fu & Allegra Wiesenfield": [124]}, "Co-President of the TCA Winner #1": {"Lauren Adolphe": [35, 35, 40, "*"], "Reopen Nominations": [9, "*", "*", "*"], "Syndi Li Walton": [58, 58, 59, 67], "Katie Fettes": [88, 88, 97, 112], "Neumann Hon": [21, 21, "*", "*"]}, "Co-President of the TCDS Winner #2": {"Hannah Lazare": ["*", "*"], "Rebecca Lefranc": [88, 91], "Reopen Nominations": [27, "*"], "Ishani Ranjan": [71, 71]}, "Co-President of the TCDS Winner #1": {"Hannah Lazare": [101, 102], "Rebecca Lefranc": [38, 38], "Reopen Nominations": [20, "*"], "Ishani Ranjan": [54, 54]}, "Co-President of the TCES Winner #1": {"Kitty Condon": [33, 34, "*"], "Reopen Nominations": [8, "*", "*"], "Emily Shaw": [97, 97, 108], "Nathan Postma": [62, 63, 72]}, "Co-President of the TCES Winner #2": {"Kitty Condon": [39], "Reopen Nominations": [15], "Emily Shaw": ["*"], "Nathan Postma": [123]}, "Fourth Year Female Head of Residence": {"Sydney Bradshaw": [26, 28], "Reopen Nominations": [9, "*"], "Kendra Dempsey": [20, 20]}, "Third Year Female Head of Residence": {"Kitty Condon": [5, "*", "*", "*"], "Jenny Qian": [45, 48, 48, 55], "Jessica Kristen Rapson": [33, 35, 36, 38], "Reopen Nominations": [7, 7, "*", "*"], "Esme Lafleur": [19, 19, 19, "*"]}, "Prime Minister of the TCLI": {"Avneet Sharma": [26, 27, "*"], "Harry Twyford": [94, 96, 103], "Reopen Nominations": [19, "*", "*"], "Kendra Dempsey": [55, 55, 66], "Andrey Khesin": [25, 28, 28]}, "Editor in Chief of the Salterrae": {"Avneet Sharma": [46, 46, "*"], "Anna Trikas": [96, 97, 120], "Reopen Nominations": [17, "*", "*"], "Ethan Raymond": [55, 55, 65]}, "WUSC President": {"Madelin Burt-D'Agnillo": [139], "Reopen Nominations": [28]}, "Stephanos Ticket": {"Heather Nichols and Grace Bonnett and Valerie Steckle": [164], "Reopen Nominations": [31]}, "Third Year Male Head of Non Residence": {"Usman Malik": [30, "*"], "Reopen Nominations": [32, 56], "DING CHANG (HAN) HAN": [30, "*"]}, "Sober Patrol Leader Winner #2": {"Alexander Sapp": ["*"], "Kitty Condon": [54], "David Oliver": [137], "Reopen Nominations": [12]}, "Sober Patrol Leader Winner #1": {"Alexander Sapp": [95, 96, 111], "Kitty Condon": [44, 44, "*"], "David Oliver": [65, 65, 73], "Reopen Nominations": [8, "*", "*"]}}
+
+
+
+      $( document ).ready(function() {
+
+        var text = '';
+
+        for (var i of Object.keys(data).sort()) {
+
+          text += '<h3>' + i + '</h3>';
+          text += '<table class="pure-table pure-table-horizontal"><thead><tr><th>Round</th>';
+
+          var length;
+          for (var name in data[i]) {
+            text += '<th>' + name + '</th>'
+            length = data[i][name].length;
+          } text += '</tr></thead><tbody>';
+
+          var c = 0;
+          while (c < length) {
+            text += '<td><b>' + (c + 1) + '</b></td>';
+            for (var name in data[i]) {
+              text += '<td>' + data[i][name][c] + '</td>'
+            } text += '</tr>';
+            c++;
+          };
+          text += '</tbody></table><hr/>';
+
+          $( '.dump' ).append(text);
+          text = '';
+        }
+
+      });
+
+    </script>
+  </body>
+</html>
