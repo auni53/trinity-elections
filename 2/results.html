@@ -11,7 +11,6 @@
     <link rel='stylesheet' type='text/css' href='../stylesheet.css'>
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
-    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 
   </head>
   <body>
@@ -36,8 +35,23 @@
         var text = '';
 
         for (var i of Object.keys(data).sort()) {
+          win_n = 0;
+          winners = []
+          for (var name in data[i]) {
+            console.log(name)
+            rounds = data[i][name].length
+            last_round_n = data[i][name][rounds - 1]
+            if (last_round_n != '*') {
+              console.log(last_round_n);
+              if (last_round_n > win_n) {
+                winners = [name]
+                win_n = last_round_n;
+              } else if (last_round_n == win_n) winners.push(name)
+            }
+          } 
 
           text += '<h3>' + i + '</h3>';
+          text += '<h4>' + winners + '</h4>';
           text += '<table class="pure-table pure-table-horizontal"><thead><tr><th>Round</th>';
 
           var length;
@@ -50,7 +64,11 @@
           while (c < length) {
             text += '<td><b>' + (c + 1) + '</b></td>';
             for (var name in data[i]) {
-              text += '<td>' + data[i][name][c] + '</td>'
+              text += '<td>';
+              if (winners.includes(name)) text += '<b>'
+              text += data[i][name][c];
+              if (winners.includes(name)) text += '</b>'
+              text += '</td>';
             } text += '</tr>';
             c++;
           };
