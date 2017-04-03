@@ -73,6 +73,7 @@ th {
   to { transform: rotate(360deg); }
 }
 
-.pure-table {
-animation-name: spin; animation-duration: 4000ms; animation-iteration-count: infinite; anima
-    tion-timing-function: linear;}
+/* .pure-table {
+  animation-name: spin; animation-duration: 4000ms; animation-iteration-count: infinite; anima
+  tion-timing-function: linear;}
+*/
